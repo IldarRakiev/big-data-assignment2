@@ -46,7 +46,9 @@ services:
       - "7000:7000"
     networks:
       - spark-cluster
-    
+    environment:
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=128M
 
 networks:
   spark-cluster:
